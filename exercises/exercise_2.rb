@@ -4,9 +4,10 @@ require_relative './exercise_1'
 puts "Exercise 2"
 puts "----------"
 
-# Your code goes here ...
+# Your code goes here ..
 @store1  = Store.first;
-@store2Arr = Store.limit(2)
-@store2 = @store2Arr[2]
-@store1.name = "bubbles";
-@store1.save;
+puts @store1.name
+@store2 = Store.find_by(id: 3)
+@store1.name = "bubbles"
+@store1.save
+puts @store1.name
